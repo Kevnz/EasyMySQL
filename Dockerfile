@@ -3,7 +3,7 @@ FROM ubuntu:latest
 MAINTAINER Kevin Isom
 
 # Install latest updates
-RUN wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
+RUN curl http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
 RUN sudo dpkg -i mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
 RUN apt-get update
 RUN apt-get upgrade -y

@@ -3,12 +3,12 @@ FROM ubuntu:latest
 MAINTAINER Kevin Isom
 
 # Install latest updates
+
+RUN apt-get update
+RUN apt-get upgrade -y
 RUN apt-get -y install wget
 RUN wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
 RUN sudo dpkg -i mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
-RUN apt-get update
-RUN apt-get upgrade -y
-
 
 # Install mysql client and server
 RUN apt-get -y install mysql-client=5.6 mysql-server=5.6 curl

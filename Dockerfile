@@ -10,8 +10,12 @@ RUN apt-get -y install wget
 RUN wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
 RUN sudo dpkg -i mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
 
+
+RUN apt-cache policy mysql-client
+RUN apt-cache policy mysql-server
+
 # Install mysql client and server
-RUN apt-get -y install mysql-client=5.6 mysql-server=5.6 curl
+RUN apt-get -y install mysql-client mysql-server curl
 
 # Enable remote access (default is localhost only, we change this
 # otherwise our database would not be reachable from outside the container)

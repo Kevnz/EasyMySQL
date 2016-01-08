@@ -44,7 +44,7 @@ behind the scenes for you (which is my preferred way in case of github provided
   Dockerfiles):
 
 ```Shell
-docker build -t mysqldb github.com/nkratzke/easymysql
+docker build -t mysqldb github.com/kevnz/easymysql
 ```
 
 Now you have an image named *mysqldb* on your system, capable to

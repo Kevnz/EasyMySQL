@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:12.04
 
 MAINTAINER Kevin Isom
 
@@ -6,7 +6,6 @@ MAINTAINER Kevin Isom
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get -y install sudo
 RUN apt-get -y install wget
 RUN wget http://dev.mysql.com/get/mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
 RUN sudo dpkg -i mysql-apt-config_0.3.7-1ubuntu14.04_all.deb
